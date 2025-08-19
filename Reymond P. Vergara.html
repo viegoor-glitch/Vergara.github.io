@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reymond P. Vergara - Futuristic Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    /* Futuristic Background */
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+      overflow-x: hidden;
+      color: #fff;
+      min-height: 100vh;
+      perspective: 1000px;
+    }
+
+    /* Floating robot particles */
+    .robot {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('https://cdn-icons-png.flaticon.com/512/4712/4712035.png') no-repeat center/contain;
+      animation: float 10s infinite ease-in-out;
+      opacity: 0.7;
+    }
+    .robot:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+    .robot:nth-child(2) { top: 50%; left: 80%; animation-delay: 3s; }
+    .robot:nth-child(3) { top: 70%; left: 20%; animation-delay: 6s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-50px) rotate(20deg); }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #00ffe0;
+      text-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+      margin-bottom: 20px;
+    }
+
+    .typing {
+      display: inline-block;
+      font-size: 1.5rem;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 5s steps(25, end) forwards, blink 0.7s infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 19ch; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Floating Profile Pic */
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 6px solid #00ffe0;
+      margin: 30px auto;
+      display: block;
+      animation: floatProfile 6s ease-in-out infinite;
+      box-shadow: 0 20px 50px rgba(0,255,255,0.5);
+    }
+    @keyframes floatProfile {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-25px); }
+    }
+
+    /* Chibi Assistant */
+    .assistant {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 150px;
+      height: 150px;
+      background: url('https://cdn-icons-png.flaticon.com/512/4712/4712027.png') no-repeat center/contain;
+      animation: assistantFloat 4s infinite ease-in-out;
+      z-index: 3;
+    }
+    @keyframes assistantFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    /* Content Card */
+    .card {
+      background: rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 900px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+    .card:hover {
+      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+    }
+
+    h2 {
+      color: #00ffe0;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .testimonial {
+      background: rgba(0, 255, 224, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      font-style: italic;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,255,224,0.4);
+    }
+
+    /* Contact Info */
+    .contact-info {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .contact-info p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    .contact-info a {
+      color: #00ffe0;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 1rem;
+      background: rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Robots Background -->
+  <div class="robot"></div>
+  <div class="robot"></div>
+  <div class="robot"></div>
+
+  <header>
+    <h1>Reymond P. Vergara</h1>
+    <p class="typing">ITS COLLEGE STUDENT</p>
+    <img src="VERGS.JPG" alt="Profile Picture" class="profile-img">
+  </header>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>I am Reymond P. Vergara, an Information Technology student at Gateways Institute of Science and Technology with a strong passion for learning and exploring new technologies. I enjoy coding, web design, and solving technical problems. My goal is to gain more hands-on experience, improve my skills, and one day contribute to innovative projects in the IT industry.</p>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <p>💻 HTML, CSS2, Problem Solving, Social Media Management</p>
+  </div>
+
+  <div class="card">
+    <h2>Interests</h2>
+    <p>🎮 Gaming | 🎧 Music | 💻 Watching Movies and Anime | </p>
+  </div>
+
+  <div class="card">
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">"Learning IT has been a challenging yet rewarding experience. Every error I debug makes me stronger as a student."</div>
+      <div class="testimonial">"Working on projects taught me the value of teamwork, problem-solving, and applying theories into real-life solutions."</div>
+      <div class="testimonial">"Technology evolves fast, but I’ve learned to stay curious, adaptable, and excited to keep growing in this field."</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>📧 Gmail: <a href="reymondvergara16@gmail.com">reymondvergara16@gmail.com</a></p>
+      <p>📱 Phone:09815523459</p>
+      <p>🌐 Facebook: <a href="https://www.facebook.com/profile.php?id=61576629025363">Dagz Vergs</a></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Reymond P. Vergara - Alrights Reserve.
+  </footer>
+
+  <!-- Floating Chibi Assistant -->
+  <div class="assistant"></div>
+</body>
+</html>
